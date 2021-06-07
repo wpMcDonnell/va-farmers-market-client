@@ -1,1 +1,11 @@
+$primary:#52796f;
+$background-color:#fefae0;
+
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+body {
+  font-family: 'Permanent Marker', cursive;
+  background-color: $background-color;
+}
