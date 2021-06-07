@@ -6,12 +6,13 @@ class Home extends Component {
 
     const backgroundStyle = {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      justifyContent: 'center'
     }
 
     return (
       <div id="welcome-container" style={backgroundStyle} className="img">
-        <img className='seal' src="seal.png" alt="Sic Semper Tyrannus"></img>
+        <img className='animals justify-content-center align-content-center' src="farm-animals.png" alt="Local"></img>
       </div>
     )
   }
