@@ -3,11 +3,27 @@ $background-color:#fefae0;
 
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
 
 body {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Merriweather', serif;
   background-color: $background-color;
+}
+
+.about {
+  font-family: 'Permanent Marker', cursive;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.about-paragraph {
+  font-family: 'Permanent Marker', cursive;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-size: 18px;
 }
 
 .animals {
@@ -17,6 +33,17 @@ body {
   max-width: 82%;
   max-height: 82%;
   bottom: 0px;
+}
+
+.chicken {
+  // position: absolute;
+  max-width: 25%;
+  max-height: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  // bottom: 3px;
 }
 
 
@@ -38,5 +65,23 @@ body {
     position: relative;
     right: 0px;
     left: 0rem;
+  }
+}
+
+@media (min-height: 700px) {
+  .chicken {
+    max-width: 30%;
+    max-height: 30%;
+    position: absolute;
+    bottom: 5px;
+    left: 8.5rem;
+  }
+  .about {
+    margin-top: 4rem;
+    font-size: 30px;
+  }
+  .about-paragraph {
+    margin-top: 4.5rem;
+    font-size: 22px;
   }
 }

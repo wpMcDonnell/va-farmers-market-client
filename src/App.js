@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
+import About from './components/About/About'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import Markets from './components/Markets/Markets'
@@ -56,10 +57,13 @@ class App extends Component {
         ))}
         <main className="container">
           <Route exact path='/' render={() => (
-            <Home msgAlert={this.msgAlert} setUser={this.setUser} />
+            <Home msgAlert={this.msgAlert} />
+          )} />
+          <Route exact path='/about' render={() => (
+            <About msgAlert={this.msgAlert}/>
           )} />
           <Route exact path='/markets' render={() => (
-            <Markets msgAlert={this.msgAlert} setUser={this.setUser} />
+            <Markets msgAlert={this.msgAlert} />
           )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
