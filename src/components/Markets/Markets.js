@@ -44,10 +44,6 @@ class Markets extends Component {
     return this.setState({ marshall: true })
   }
 
-  middleburgClick = (event) => {
-    return this.setState({ middleburg: true })
-  }
-
   // componentDidMount will be run when the component finished mounting
   // AFTER the FIRST render
   componentDidMount () {
@@ -62,7 +58,7 @@ class Markets extends Component {
       alignContent: 'center'
     }
 
-    const { warrenton, plains, marshall, middleburg } = this.state
+    const { warrenton, plains, marshall } = this.state
     if (warrenton) {
       // if deleted is true, we can redirect
       return <Redirect to="/warrenton"/>
@@ -70,8 +66,6 @@ class Markets extends Component {
       return <Redirect to="/plains"/>
     } else if (marshall) {
       return <Redirect to="/marshall"/>
-    } else if (middleburg) {
-      return <Redirect to="/middleburg"/>
     }
 
     return (
@@ -86,19 +80,13 @@ class Markets extends Component {
           <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.plainsClick}>
             <Card.Img variant="top" src="plains.png"/>
             <Card.Body>
-              <Card.Title>The Plains</Card.Title>
+              <Card.Title className=''>The Plains</Card.Title>
             </Card.Body>
           </Card>
-          <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.plainsClick}>
-            <Card.Img variant="top" src="plains.png"/>
+          <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.marshallClick}>
+            <Card.Img variant="top" src="marshall.jpeg"/>
             <Card.Body>
-              <Card.Title>The Plains</Card.Title>
-            </Card.Body>
-          </Card>
-          <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.plainsClick}>
-            <Card.Img variant="top" src="plains.png"/>
-            <Card.Body>
-              <Card.Title>The Plains</Card.Title>
+              <Card.Title>Marshall</Card.Title>
             </Card.Body>
           </Card>
         </div>
