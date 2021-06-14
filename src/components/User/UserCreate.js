@@ -13,7 +13,7 @@ import { Card } from 'react-bootstrap'
 // apiUrl from apiConfig.js
 
 // 2. The class
-class Markets extends Component {
+class UserCreate extends Component {
   // 2 very important React class component methods
   // constructor & render
   constructor () {
@@ -61,11 +61,11 @@ class Markets extends Component {
     const { warrenton, plains, marshall } = this.state
     if (warrenton) {
       // if deleted is true, we can redirect
-      return <Redirect to="/warrenton"/>
+      return <Redirect to="/user-create/warrenton"/>
     } else if (plains) {
-      return <Redirect to="/plains"/>
+      return <Redirect to="/user-create/plains"/>
     } else if (marshall) {
-      return <Redirect to="/marshall"/>
+      return <Redirect to="/user-create/marshall"/>
     }
 
     return (
@@ -74,19 +74,19 @@ class Markets extends Component {
           <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.warretonClick}>
             <Card.Img variant="top" src="warrenton.png"/>
             <Card.Body>
-              <Card.Title>Warrenton</Card.Title>
+              <Card.Title>Set up your tent for Warrenton</Card.Title>
             </Card.Body>
           </Card>
           <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.plainsClick}>
             <Card.Img variant="top" src="plains.png"/>
             <Card.Body>
-              <Card.Title className=''>The Plains</Card.Title>
+              <Card.Title className=''>Set up your tent for The Plains</Card.Title>
             </Card.Body>
           </Card>
           <Card className="mb-5 shadow" style={{ width: '18rem' }} onClick={this.marshallClick}>
             <Card.Img variant="top" src="marshall.jpeg"/>
             <Card.Body>
-              <Card.Title>Marshall</Card.Title>
+              <Card.Title>Set up your tent for Marshall</Card.Title>
             </Card.Body>
           </Card>
         </div>
@@ -96,4 +96,4 @@ class Markets extends Component {
 }
 
 // 3. The export
-export default withRouter(Markets)
+export default withRouter(UserCreate)
